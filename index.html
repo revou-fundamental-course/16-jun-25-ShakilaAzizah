@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Matematika Segitiga</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <body>
+    <div class="container">
+        <h1>Welcome to TriKalku!🧮</h1>
+        <p>🎉 Siap-siap jadi ahli segitiga tanpa pusing tujuh keliling!<br>
+        TriKalku hadir untuk bantu kamu ngitung <strong>luas</strong> dan <strong>keliling</strong> segitiga dengan cara paling seru dan gemes! 🍭</p>
+
+        <div class="tab">
+            <button onclick="openTab('luas')">✨ Luas Segitiga</button>
+            <button onclick="openTab('keliling')">🌈 Keliling Segitiga</button>
+        </div>
+
+        <div id="luas" class="tab-content">
+            <h2>💖 Luas Segitiga</h2>
+            <img src="SEGITIGA.jpg" alt="Luas Segitiga">
+            <p>Rumus: <strong>L = 1/2 × a × t</strong></p>
+            <p><strong>Noted!</strong> Gunakan titik (.) untuk angka desimal</p>
+            <form onsubmit="event.preventDefault(); hitungLuas();">
+                <input type="number" id="alas" placeholder="Masukkan panjang alas" required step="any">
+                <input type="number" id="tinggi" placeholder="Masukkan tinggi" required step="any">
+                <button type="submit">Hitung Luas</button>
+                <button type="button" onclick="resetLuas()">Reset</button>
+            </form>
+            <p id="hasilLuas"></p>
+        </div>
+
+        <div id="keliling" class="tab-content" style="display:none">
+            <h2>💛 Keliling Segitiga</h2>
+            <img src="SEGITIGA.jpg" alt="Keliling Segitiga">
+            <p>Rumus: <strong>K = sisi A + sisi B + sisi C</strong></p>
+            <p><strong>Noted!</strong> Gunakan titik (.) untuk angka desimal</p>
+            <form onsubmit="event.preventDefault(); hitungKeliling();">
+                <input type="number" id="sisi1" placeholder="Masukkan sisi A" required step="any">
+                <input type="number" id="sisi2" placeholder="Masukkan sisi B" required step="any">
+                <input type="number" id="sisi3" placeholder="Masukkan sisi C" required step="any">
+                <button type="submit">Hitung Keliling</button>
+                <button type="button" onclick="resetKeliling()">Reset</button>
+            </form>
+            <p id="hasilKeliling"></p>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
